@@ -1,0 +1,83 @@
+/* button1 */
+.button1-part0 { padding:5px 0px 6px 11px; } 
+.button1-part0-down { padding:5px 0px 6px 11px;  }
+.button1-part1 {padding:5px 23px 6px 0px}
+.button1-part1-down { padding:5px 23px 6px 0px;  }
+
+/* button2 */
+.button2-part0 { padding:5px 0px 6px 11px; } 
+.button2-part0-down { padding:5px 0px 6px 11px;  }
+.button2-part1 {padding:5px 23px 6px 0px}
+.button2-part1-down { padding:5px 23px 6px 0px;  }
+
+/* button3 */
+.button3-part0 { padding:5px 0px 6px 11px; } 
+.button3-part0-down { padding:5px 0px 6px 11px;  }
+.button3-part1 {padding:5px 23px 6px 0px}
+.button3-part1-down { padding:5px 23px 6px 0px;  }
+
+
+
+.grid .cell1 .button1-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button1-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell1 .button1-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button1-part1-down {padding: 3px 20px 6px 0px;}
+
+.grid .cell2 .button1-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button1-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell2 .button1-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button1-part1-down {padding: 3px 20px 6px 0px;}
+
+.grid .cell1 .button2-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button2-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell1 .button2-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button2-part1-down {padding: 3px 20px 6px 0px;}
+
+.grid .cell2 .button2-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button2-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell2 .button2-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button2-part1-down {padding: 3px 20px 6px 0px;}
+
+.grid .cell1 .button3-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button3-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell1 .button3-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell1 .button3-part1-down {padding: 3px 20px 6px 0px;}
+
+.grid .cell2 .button3-part0 {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button3-part1 {padding: 3px 20px 6px 0px;}
+.grid .cell2 .button3-part0-down {padding: 3px 0px 6px 11px;}
+.grid .cell2 .button3-part1-down {padding: 3px 20px 6px 0px;}
+
+/*boutons actualités*/
+.header-level1 .button1-part0, .header-level1 .button1-part0-down {
+padding: 3px 0px 6px 11px;
+}
+.header-level1 .button1-part1, .header-level1 .button1-part1-down {
+padding: 3px 23px 6px 0px;
+}
+
+/*grid file-center; grid site web*/
+.grid{border-right:1px solid #ABB0B3; border-left:1px solid #ABB0B3  }
+.grid-header1 {border-right:0px none; border-left:0px none}
+.grid-content-zone {border-right:0px none; border-left:0px none}
+.grid-footer {border-top-width: 0px; border-right:0px none; border-left:0px none}
+.grid .grid-footer{border-top:1px solid #ABB0B3;}
+
+/*step*/
+.step .grid{
+border-right:1px solid #ABB0B3;
+border-left:1px solid #ABB0B3;
+}
+.step .grid-header1{border-left:0px none}
+.step .grid-footer{border-left:0px none;border-top:1px solid #ABB0B3;}
+
+/*datepicker*/
+.ui-datepicker {width:240px;}
+.ui-datepicker .ui-datepicker-title select { font-size: 0.8em;}
+.ui-datepicker .ui-datepicker-title {margin-top:3px}
+
+/*Fix application height*/
+.outer-right-bottom {height:auto!important}
+
+/*New file upload*/
+.vui-file-upload .files .grid{border:0 none;  }

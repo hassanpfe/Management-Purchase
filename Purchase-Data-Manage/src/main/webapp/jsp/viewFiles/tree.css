@@ -1,0 +1,50 @@
+/* -------------common all browsers VDoc tree -------------- */
+
+/*----tree----*/
+/*--tree main--*/
+.tree {  }
+.tree .outer {table-layout:fixed;}
+.tree .left {}
+.tree .center {}
+.tree .right {}
+.tree .buttons-outer {text-align:left; background-image:none; padding-top:0px;}
+.tree .innertree {  position:relative; padding:7px; margin:0px; }
+
+/*--tree items--*/
+.tree .root {font:bold 11px arial,helvetica,sans serif!important; color:#363745; }
+.tree .root A { padding:0px 3px 0px 3px; cursor:pointer}
+.tree .root SPAN { padding:0px 3px 0px 3px; }
+.tree .item {font:normal 11px arial,helvetica,sans serif!important; color:#363745;}
+.tree .item A { padding:0px 3px 0px 3px; cursor:pointer;}
+.tree .item SPAN { padding:0px 3px 0px 3px; }
+.tree .item A:link,.tree .item A:visited {color:#363745; text-decoration:none}
+.tree .item A:hover,.tree .item A:active {text-decoration:none}
+.tree .selecteditem {font:normal 11px arial,helvetica,sans serif!important; color:#FFFFFF;}
+.tree .selecteditem A { background-color:#959498; padding:0px 3px 0px 3px; cursor:pointer}
+.tree .selecteditem SPAN { padding:0px 3px 0px 3px; }
+.tree .full {font-weight:bold}
+
+/*--tree nodes--*/
+.treeNodeCollapsed {background-image:url(../images/mandatory/collapsed_tree_node.gif); background-repeat:no-repeat; background-position:2px 6px; cursor:pointer;}
+.treeNodeExpanded {background-image:url(../images/mandatory/expanded_tree_node.gif); background-repeat:no-repeat; background-position:2px 6px; cursor:pointer;}
+.treeNodeI {background-image:url(../images/mandatory/tree_node_i.gif); background-repeat:repeat-y; background-position:2px 0px;}
+.treeNodeT {background-image:url(../images/mandatory/tree_node_t.gif); background-repeat:no-repeat; background-position:2px 0px; }
+.treeNodeL {background-image:url(../images/mandatory/tree_node_l.gif); background-repeat:no-repeat; background-position:2px 0px; }
+
+/*--tree icons--*/
+.treeRoot {background-image:url(../images/mandatory/tree_root.gif); background-repeat:no-repeat; background-position:0px 2px; }
+.treeClosedFolder {background-image:url(../images/mandatory/closed_folder.gif); background-repeat:no-repeat; background-position:2px 3px; }
+.treeOpenedFolder {background-image:url(../images/mandatory/opened_folder.gif); background-repeat:no-repeat; background-position:2px 3px; }
+.treeDocumentDefault {background-image:url(../images/mandatory/doc_default.gif); background-repeat:no-repeat; background-position:0px 2px; }
+.treeVDocProcessApplications {background-image:url(../images/mandatory/vdpj_applications.gif); background-repeat:no-repeat; background-position:0px 2px; }
+.treeProcessApplication {background-image:url(../images/mandatory/process_group.png); background-repeat:no-repeat; background-position:0px 2px; }
+.treeProcess {background-image:url(../images/mandatory/process.png); background-repeat:no-repeat; background-position:0px 2px; }
+.treeProcessVersion {background-image:url(../images/mandatory/process_version.png); background-repeat:no-repeat; background-position:0px 2px; }
+.treeProcessStep {background-image:url(../images/mandatory/process_step.gif); background-repeat:no-repeat; background-position:0px 2px; }
+.treeVDocDMDocuments {background-image:url(../images/mandatory/open_document.gif); background-repeat:no-repeat; background-position:0px 2px;}
+.treeDMDatabase {background-image:url(../images/mandatory/database.gif); background-repeat:no-repeat; background-position:0px 2px; }
+.treeDMDocument {background-image:url(../images/mandatory/dm_document.gif); background-repeat:no-repeat; background-position:0px 2px;}
+.treeVDocReport {background-image:url(../images/mandatory/report.gif); background-repeat:no-repeat; background-position:2px 2px;}
+.treeIndicators {background-image:url(../images/mandatory/indicator.gif); background-repeat:no-repeat; background-position:1px 2px;}
+.treePageTemplate {background-image:url(../images/mandatory/page_template.gif); background-repeat:no-repeat; background-position:2px 2px;}
+.treeBlockTemplate {background-image:url(../images/mandatory/block_template.gif); background-repeat:no-repeat; background-position:2px 2px;}
