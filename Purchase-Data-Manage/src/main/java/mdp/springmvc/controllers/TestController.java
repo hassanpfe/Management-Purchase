@@ -29,7 +29,7 @@ public class TestController {
 		user.setPassword("password");
 		user.setPhone("Phone");
 		ModelAndView mav = new ModelAndView("userform");
-		
+		mav.addObject(user);
 
 		return mav;
 	}

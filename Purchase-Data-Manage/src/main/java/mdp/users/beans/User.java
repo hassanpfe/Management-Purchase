@@ -1,6 +1,7 @@
 package mdp.users.beans;
 
 public class User {
+	private String id;
 	private String username;
 	private String password;
 	private String firstname;
@@ -8,6 +9,7 @@ public class User {
 	private String email;
 	private String address;
 	private String phone;
+	private String sex;
 	public User(){
 		
 	}
@@ -63,5 +65,20 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	
+	
 	
 }
