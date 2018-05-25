@@ -1,9 +1,9 @@
-package mdp.test;
-
-import mdp.persistence.HibernateUtil;
-import mdp.users.beans.User;
+package com.mdp.test;
 
 import org.hibernate.Session;
+
+import com.mdp.beans.User;
+import com.mdp.persistence.HibernateUtil;
 
 public class App {
 

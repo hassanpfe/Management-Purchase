@@ -1,4 +1,4 @@
-package mdp.users.beans;
+package com.mdp.beans;
 
 public class User {
 	private String id;

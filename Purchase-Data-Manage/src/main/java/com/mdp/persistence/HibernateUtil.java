@@ -1,4 +1,4 @@
-package mdp.persistence;
+package com.mdp.persistence;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

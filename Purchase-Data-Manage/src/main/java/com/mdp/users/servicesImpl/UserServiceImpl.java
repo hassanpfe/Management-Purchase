@@ -1,8 +1,8 @@
-package mdp.users.servicesImpl;
+package com.mdp.users.servicesImpl;
 
-import mdp.login.model.Login;
-import mdp.users.beans.User;
-import mdp.users.services.IUserService;
+import com.mdp.beans.User;
+import com.mdp.login.model.Login;
+import com.mdp.users.services.IUserService;
 
 
 public  class UserServiceImpl implements IUserService{

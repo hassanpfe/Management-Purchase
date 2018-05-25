@@ -1,11 +1,7 @@
-package mdp.springmvc.controllers;
+package com.mdp.springmvc.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import mdp.login.model.Login;
-import mdp.users.beans.User;
-import mdp.users.servicesImpl.UserServiceImpl;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,6 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.mdp.beans.User;
+import com.mdp.login.model.Login;
+import com.mdp.users.servicesImpl.UserServiceImpl;
 
 @Controller
 

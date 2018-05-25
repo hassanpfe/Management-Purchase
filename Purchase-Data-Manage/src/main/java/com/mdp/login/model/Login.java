@@ -1,4 +1,4 @@
-package mdp.login.model;
+package com.mdp.login.model;
 
 public class Login {
 	private String username;

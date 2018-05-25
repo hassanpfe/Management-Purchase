@@ -1,7 +1,7 @@
-package mdp.users.services;
+package com.mdp.users.services;
 
-import mdp.login.model.Login;
-import mdp.users.beans.User;
+import com.mdp.beans.User;
+import com.mdp.login.model.Login;
 
 public interface IUserService {
 

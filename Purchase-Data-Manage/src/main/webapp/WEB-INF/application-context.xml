@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <import resource="classpath:webSecurityConfig.xml" />
-<bean id="userBean" class="mdp.users.beans.User">
+<bean id="userBean" class="com.mdp.beans.User">
 <property name="username" value="user1"></property>
 <property name="password" value="password"></property>
 <property name="firstname" value="user1"></property>
