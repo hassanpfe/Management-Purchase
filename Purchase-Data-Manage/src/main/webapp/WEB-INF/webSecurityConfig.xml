@@ -8,10 +8,15 @@
 
 	<http auto-config="true">
 		<!--http-basic/>-->
-		<form-login login-page="/login" login-processing-url="" username-parameter="username_input" password-parameter="username_input"/>
+		<form-login 
+			login-page="/login" 
+			login-processing-url="" 
+			username-parameter="username_input" 
+			password-parameter="username_input"
+			/>
 		<intercept-url pattern="/login" access="ROLE_ANONYMOUS" />
 		<intercept-url pattern="/loginProcess" access="ROLE_ANONYMOUS" />
-		
+		<intercept-url pattern="/test" access="ROLE_USER" />
 		
 	</http>
 

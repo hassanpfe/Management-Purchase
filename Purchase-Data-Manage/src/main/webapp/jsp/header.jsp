@@ -7,19 +7,24 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+<!-- link rel="stylesheet"
+	href="resources/core/css/bootstrap.min.css"> -->
+
+
+<!-- Optional theme -->
+<!-- link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+ -->
 <!-- Latest Jquery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
 	type="text/javascript"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script
+<!--  script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
 	
-</script>
+</script>-->
 <!-- jsp:include page="../fragments/header.jsp" /> -->
 <!-- spring:url value="hello.css" var="coreCss" /> -->
 <!-- spring:url value="bootstrap.min.css" 

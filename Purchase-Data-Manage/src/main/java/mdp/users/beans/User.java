@@ -10,6 +10,7 @@ public class User {
 	private String address;
 	private String phone;
 	private String sex;
+	private String fonction;
 	public User(){
 		
 	}
@@ -77,6 +78,13 @@ public class User {
 	public void setId(String id) {
 		this.id = id;
 	}
+	public String getFonction() {
+		return fonction;
+	}
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+	
 	
 	
 	

@@ -8,4 +8,5 @@ public interface IUserService {
 	
 	
 	public abstract User validateUser(Login Login);
+	public abstract User registerUser(User user);
 }

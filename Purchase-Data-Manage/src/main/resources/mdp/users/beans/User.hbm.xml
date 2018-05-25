@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="mdp.users.beans.User" table="profil" catalog="management_purchase">
+        <id name="id" type="string">
+            <column name="id_profil" length="50" not-null="true" unique="true" />        
+        </id>
+        <property name="lastname" type="string">
+            <column name="nom_validateur" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="prenom_validateur" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="email" type="string">
+            <column name="mail" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="username" type="string">
+            <column name="identifiant" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Mdp" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="address" type="string">
+            <column name="adresse" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="fonction" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="50" not-null="true" unique="false" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

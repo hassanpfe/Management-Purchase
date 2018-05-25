@@ -13,9 +13,10 @@
 <jsp:include page="header.jsp" />
 	<table>
 		<tr>
-			<td>Welcome ${firstname}</td>
+			<td>Welcome Nom; ${firstname}</td>
 		</tr>
 		<tr>
+		<td>Welcome Password ${password}</td>
 		</tr>
 		<tr>
 		</tr>

@@ -1,23 +1,18 @@
-package mdp.springmvc.controllers;
+/*package mdp.test;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mdp.login.model.Login;
-import mdp.users.beans.User;
 import mdp.users.servicesImpl.UserServiceImpl;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 
-public class LoginController {
+public class TestController {
 
 	//	@Autowired
 
@@ -25,23 +20,21 @@ public class LoginController {
 
 	UserServiceImpl userService=new UserServiceImpl();
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
 
 	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
 		
 		
 
-		ModelAndView mav = new ModelAndView("login");
-		Login login =new Login();
-		mav.addObject(login);
-		request.getRemoteAddr();
+		ModelAndView mav = new ModelAndView("testSideBar");
+		
 
 		return mav;
 	}
 	
 	
 
-	@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
 
 	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
 
@@ -66,16 +59,12 @@ public class LoginController {
 
 		} else {
 
-			mav = new ModelAndView("bc");
-			/*
-			 * 
-			 * To DO
-			 */
+			mav = new ModelAndView("welcome");
+			
 			System.out.println("firstname: "+user.getFirstname());
 			System.out.println("password: "+user.getPassword());
 			mav.addObject("firstname", user.getFirstname());
 			mav.addObject("password", user.getPassword());
-			mav.addObject("user", user);
 		}
 
 		return mav;
@@ -83,4 +72,4 @@ public class LoginController {
 	}
 
 
-}
+}*/

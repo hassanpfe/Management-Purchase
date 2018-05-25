@@ -12,6 +12,7 @@ public  class UserServiceImpl implements IUserService{
 		
 		User user =new User();
 		user.setFirstname(login.getUsername());
+		user.setPassword(login.getPassword());
 		/*
 		 * 
 		 * Chercher l'utilisateur avec les infos données dans la base de données et le retourner
@@ -19,6 +20,12 @@ public  class UserServiceImpl implements IUserService{
 		 */
 		
 		return user;
+	}
+
+	@Override
+	public User registerUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
