@@ -36,8 +36,8 @@
 			<div class="form-group ${status.error ? 'has-error' : ''}">
 				<label class="col-sm-2 control-label">Date Commande</label>
 				<div class="col-sm-10">
-					<form:input path="datecommande" type="text" class="form-control " id="datecommande" placeholder="datecommande" />
-					<form:errors path="datecommande" class="control-label" />
+					<form:input path="username" type="text" class="form-control " id="username" placeholder="username" />
+					<form:errors path="username" class="control-label" />
 				</div>
 			</div>
 			</div>

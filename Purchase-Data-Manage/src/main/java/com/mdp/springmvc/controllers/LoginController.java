@@ -16,7 +16,6 @@ import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
 
 @Controller
-
 public class LoginController {
 
 	//	@Autowired
@@ -75,7 +74,7 @@ public class LoginController {
 			System.out.println("password: "+user.getPassword());
 			mav.addObject("firstname", user.getFirstname());
 			mav.addObject("password", user.getPassword());
-			mav.addObject("user", user);
+			mav.addObject("commande", user);
 		}
 
 		return mav;
