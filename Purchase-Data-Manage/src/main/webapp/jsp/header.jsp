@@ -41,7 +41,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="<spring:url value="/services/"/>">NAV 1</a></li>
 			<li><a href="<spring:url value="/appointments/"/>">NAV 2</a></li>
-			<li><a href="<spring:url value="/schedule/"/>">NAV 3</a></li>
+			<li><a href="<spring:url value="/bc/"/>">NAV 3</a></li>
 			<li><a href="<spring:url value="/login/"/>">Sign In</a></li>
 		</ul>
 	</div>

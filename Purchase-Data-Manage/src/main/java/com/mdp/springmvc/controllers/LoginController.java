@@ -80,6 +80,16 @@ public class LoginController {
 		return mav;
 
 	}
+	@RequestMapping(value = "/bc", method = RequestMethod.GET)
+	public ModelAndView bc(HttpServletRequest request, HttpServletResponse response) {
+		
+		User user = new User();
+
+		ModelAndView mav = new ModelAndView("bc");
+		mav.addObject("commande", user);
+
+		return mav;
+	}
 
 
 }
