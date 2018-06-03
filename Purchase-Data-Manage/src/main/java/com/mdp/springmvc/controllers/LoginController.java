@@ -3,8 +3,8 @@ package com.mdp.springmvc.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,13 +23,33 @@ public class LoginController {
 	//
 
 	UserServiceImpl userService=new UserServiceImpl();
+	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 
 	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
-		
-		
 
+
+		if(logger.isDebugEnabled()){
+
+			logger.debug("appel au controlleur /login. Debug");
+		}
+		if(logger.isErrorEnabled()){
+
+			logger.debug("appel au controlleur /login. Error");
+		}
+		if(logger.isTraceEnabled()){
+
+			logger.debug("appel au controlleur /login. Trace");
+		}
+		if(logger.isWarnEnabled()){
+
+			logger.debug("appel au controlleur /login. Warn");
+		}
+		if(logger.isInfoEnabled()){
+
+			logger.debug("appel au controlleur /login. Info");
+		}
 		ModelAndView mav = new ModelAndView("login");
 		Login login =new Login();
 		mav.addObject(login);
@@ -37,8 +57,8 @@ public class LoginController {
 
 		return mav;
 	}
-	
-	
+
+
 
 	@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
 
@@ -50,7 +70,7 @@ public class LoginController {
 
 		mav.addObject("firstname", login.getUsername());
 		mav.addObject("password", login.getPassword());
-		
+
 		System.out.println(login.getUsername()+" "+login.getPassword());
 		User user = userService.validateUser(login);
 

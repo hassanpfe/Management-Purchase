@@ -22,7 +22,6 @@ public  class UserServiceImpl implements IUserService{
 		return user;
 	}
 
-	@Override
 	public User registerUser(User user) {
 		// TODO Auto-generated method stub
 		return null;

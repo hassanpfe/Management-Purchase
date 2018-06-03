@@ -4,8 +4,13 @@
 <title>Spring MVC Form Handling Example</title>
 
 <!-- Sources Bootstrap et JQuery -->
-<link rel="stylesheet"
+<!-- link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+-->
+
+
+<link rel="stylesheet" href="resources/bootstrap.min.css" type="text/css">
+
 
 
 <!-- link rel="stylesheet"
