@@ -5,120 +5,137 @@ import java.util.Date;
 
 
 
-
-
-
-
-
 public class BonCommande
 {
-  private int idBonCommande;
-  private int idCollaborateur;
-  private int idProjet;
-  private String statut;
-  private Date dateCommande;
-  private Date dateLivraisonSouhaite;
-  private String modePaiement;
-  private int delaiPaiement;
-  private String lieuLivraisonSouhaite;
-  private int total;
-  private int totalTtc;
-  private String commentaire;
-  
-  public BonCommande(int id_bon_commande, int id_collaborateur, int id_projet, String statut, Date date_commande, Date date_livraison_souhaite, String mode_paiement, int delai_paiement, String lieu_livraison_souhaite, int totale, int totale_ttc, String commentaire)
-  {
-    this.idBonCommande = id_bon_commande;
-    this.idCollaborateur = id_collaborateur;
-    this.idProjet = id_projet;
-    this.statut = statut;
-    this.dateCommande = date_commande;
-    this.dateLivraisonSouhaite = date_livraison_souhaite;
-    this.modePaiement = mode_paiement;
-    this.delaiPaiement = delai_paiement;
-    this.lieuLivraisonSouhaite = lieu_livraison_souhaite;
-    this.total = totale;
-    this.totalTtc = totale_ttc;
-    this.commentaire = commentaire;
-  }
-  
+	private int idBonCommande;
+	private int idCollaborateur;
+	private int idProjet;
+	private String statut;
+	private Date dateCommande;
+	private Date dateLivraisonSouhaite;
+	private String modePaiement;
+	private int delaiPaiement;
+	private String lieuLivraisonSouhaite;
+	private int total;
+	private int totalTtc;
+	private String commentaire;
+
+	public BonCommande(int idBonCommande, int idCollaborateur, int idProjet, String statut, Date dateCommande, Date dateLivraisonSouhaite, String modePaiement, int delaiPaiement, String lieuLivraisonSouhaite, int total, int totalTtc, String commentaire)
+	{
+		this.idBonCommande = idBonCommande;
+		this.idCollaborateur = idCollaborateur;
+		this.idProjet = idProjet;
+		this.statut = statut;
+		this.dateCommande = dateCommande;
+		this.dateLivraisonSouhaite = dateLivraisonSouhaite;
+		this.modePaiement = modePaiement;
+		this.delaiPaiement = delaiPaiement;
+		this.lieuLivraisonSouhaite = lieuLivraisonSouhaite;
+		this.total = total;
+		this.totalTtc = totalTtc;
+		this.commentaire = commentaire;
+	}
 
 
 
-  public BonCommande() {}
-  
+	public BonCommande() {}
+
+	public int getIdBonCommande() {
+		return idBonCommande;
+	}
+
+	public void setIdBonCommande(int idBonCommande) {
+		this.idBonCommande = idBonCommande;
+	}
+
+	public int getIdCollaborateur() {
+		return idCollaborateur;
+	}
+
+	public void setIdCollaborateur(int idCollaborateur) {
+		this.idCollaborateur = idCollaborateur;
+	}
+
+	public int getIdProjet() {
+		return idProjet;
+	}
+
+	public void setIdProjet(int idProjet) {
+		this.idProjet = idProjet;
+	}
+
+	public String getStatut() {
+		return statut;
+	}
+
+	public void setStatut(String statut) {
+		this.statut = statut;
+	}
+
+	public Date getDateCommande() {
+		return dateCommande;
+	}
+
+	public void setDateCommande(Date dateCommande) {
+		this.dateCommande = dateCommande;
+	}
+
+	public Date getDateLivraisonSouhaite() {
+		return dateLivraisonSouhaite;
+	}
+
+	public void setDateLivraisonSouhaite(Date dateLivraisonSouhaite) {
+		this.dateLivraisonSouhaite = dateLivraisonSouhaite;
+	}
+
+	public String getModePaiement() {
+		return modePaiement;
+	}
+
+	public void setModePaiement(String modePaiement) {
+		this.modePaiement = modePaiement;
+	}
+
+	public int getDelaiPaiement() {
+		return delaiPaiement;
+	}
+
+	public void setDelaiPaiement(int delaiPaiement) {
+		this.delaiPaiement = delaiPaiement;
+	}
+
+	public String getLieuLivraisonSouhaite() {
+		return lieuLivraisonSouhaite;
+	}
+
+	public void setLieuLivraisonSouhaite(String lieuLivraisonSouhaite) {
+		this.lieuLivraisonSouhaite = lieuLivraisonSouhaite;
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
+	public int getTotalTtc() {
+		return totalTtc;
+	}
+
+	public void setTotalTtc(int totalTtc) {
+		this.totalTtc = totalTtc;
+	}
+
+	public String getCommentaire() {
+		return commentaire;
+	}
+
+	public void setCommentaire(String commentaire) {
+		this.commentaire = commentaire;
+	}
 
 
-  public int getId_bon_commande()
-  {
-    return this.idBonCommande;
-  }
-  
-  public void setId_bon_commande(int id_bon_commande) { this.idBonCommande = id_bon_commande; }
-  
-  public int getId_collaborateur() {
-    return this.idCollaborateur;
-  }
-  
-  public void setId_collaborateur(int id_collaborateur) { this.idCollaborateur = id_collaborateur; }
-  
-  public int getId_projet() {
-    return this.idProjet;
-  }
-  
-  public void setId_projet(int id_projet) { this.idProjet = id_projet; }
-  
-  public String getStatut() {
-    return this.statut;
-  }
-  
-  public void setStatut(String statut) { this.statut = statut; }
-  
-  public Date getDate_commande() {
-    return this.dateCommande;
-  }
-  
-  public void setDate_commande(Date date_commande) { this.dateCommande = date_commande; }
-  
-  public Date getDate_livraison_souhaite() {
-    return this.dateLivraisonSouhaite;
-  }
-  
-  public void setDate_livraison_souhaite(Date date_livraison_souhaite) { this.dateLivraisonSouhaite = date_livraison_souhaite; }
-  
-  public String getMode_paiement() {
-    return this.modePaiement;
-  }
-  
-  public void setMode_paiement(String mode_paiement) { this.modePaiement = mode_paiement; }
-  
-  public int getDelai_paiement() {
-    return this.delaiPaiement;
-  }
-  
-  public void setDelai_paiement(int delai_paiement) { this.delaiPaiement = delai_paiement; }
-  
-  public String getLieu_livraison_souhaite() {
-    return this.lieuLivraisonSouhaite;
-  }
-  
-  public void setLieu_livraison_souhaite(String lieu_livraison_souhaite) { this.lieuLivraisonSouhaite = lieu_livraison_souhaite; }
-  
-  public int getTotale() {
-    return this.total;
-  }
-  
-  public void setTotale(int totale) { this.total = totale; }
-  
-  public int getTotale_ttc() {
-    return this.totalTtc;
-  }
-  
-  public void setTotale_ttc(int totale_ttc) { this.totalTtc = totale_ttc; }
-  
-  public String getCommentaire() {
-    return this.commentaire;
-  }
-  
-  public void setCommentaire(String commentaire) { this.commentaire = commentaire; }
+
 }
-

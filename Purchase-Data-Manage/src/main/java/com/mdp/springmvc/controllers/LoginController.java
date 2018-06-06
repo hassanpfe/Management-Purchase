@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.mdp.beans.BonCommande;
+import com.mdp.beans.BonCommandeRequest;
 import com.mdp.beans.User;
 import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
@@ -90,11 +92,13 @@ public class LoginController {
 			 * 
 			 * To DO
 			 */
+			BonCommandeRequest commandeRequest=new BonCommandeRequest();
 			System.out.println("firstname: "+user.getFirstname());
 			System.out.println("password: "+user.getPassword());
 			mav.addObject("firstname", user.getFirstname());
 			mav.addObject("password", user.getPassword());
 			mav.addObject("commande", user);
+			mav.addObject("bonCommandeRequest", commandeRequest);
 		}
 
 		return mav;

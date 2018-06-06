@@ -12,10 +12,8 @@ public class App {
 		
 		 System.out.println("Maven + Hibernate + MySQL");
 	        Session session = HibernateUtil.getSessionFactory().openSession();
-	        
-	        session.beginTransaction();
 	        User user = new User();
-	        user.setId("id1");
+	        user.setId("id0");
 	        user.setUsername("username1");
 	        user.setPassword("password1");
 	        user.setFirstname("firstname1");
@@ -25,6 +23,8 @@ public class App {
 	        user.setPhone("phone1");
 	    	user.setSex("sex1");
 	    	user.setFonction("fonction1");
+	        
+	        session.beginTransaction();
 	        
 	    	
 	        session.save(user);

@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="mdp.users.beans.User" table="profil" catalog="management_purchase">
+    <class name="com.mdp.beans.User" table="profil" catalog="management_purchase">
         <id name="id" type="string">
             <column name="id_profil" length="50" not-null="true" unique="true" />        
         </id>

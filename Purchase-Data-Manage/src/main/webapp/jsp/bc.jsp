@@ -14,90 +14,90 @@
 
 	<h1>Bon de Commande</h1>
 
-	<br />
+	<br/>
 
-	<spring:url value="/users" var="userActionUrl" />
+	<spring:url value="/bcValidate" var="userActionUrl" />
 
 	<form:form class="form-horizontal" method="post"
-		modelAttribute="commande" action="${userActionUrl}">
+		modelAttribute="bonCommandeRequest" action="${userActionUrl}">
 
-		<form:hidden path="id" />
+		<form:hidden path="idBonCommande" />
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="idBonCommande">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Numéro du BC</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="idBonCommande" type="text" class="form-control "
+								id="username" placeholder="idBonCommande" />
+							<form:errors path="idBonCommande" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
-			<spring:bind path="username">
+			<spring:bind path="dateCommande">
 				<div class="col-sm-5">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Date Commande</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="dateCommande" type="text" class="form-control "
+								id="dateCommande" dateCommande="dateCommande" />
+							<form:errors path="dateCommande" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="acheteur">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Acheteur</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="acheteur" type="text" class="form-control "
+								id="acheteur" placeholder="acheteur" />
+							<form:errors path="acheteur" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
-			<spring:bind path="username">
+			<spring:bind path="dateLivraisonSouhaite">
 				<div class="col-sm-5">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Date Livraison
 							Souhaitée</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="dateLivraisonSouhaite" type="text" class="form-control "
+								id="dateLivraisonSouhaite" placeholder="dateLivraisonSouhaite" />
+							<form:errors path="dateLivraisonSouhaite" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="fonction">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Fonction</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="fonction" type="text" class="form-control "
+								id="fonction" placeholder="fonction" />
+							<form:errors path="fonction" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="modePaiement">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Mode de paiement</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="modePaiement" type="text" class="form-control "
+								id="modePaiement" placeholder="modePaiement" />
+							<form:errors path="modePaiement" class="control-label" />
 						</div>
 					</div>
 				</div>
@@ -105,68 +105,68 @@
 		</div>
 		<h2>Détail du projet</h2>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="referenceProjet">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Référence du projet</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="referenceProjet" type="text" class="form-control "
+								id="referenceProjet" placeholder="referenceProjet" />
+							<form:errors path="referenceProjet" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
-			<spring:bind path="username">
+			<spring:bind path="lieuLivraisonSouhaite">
 				<div class="col-sm-5 ">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Lieu de livraison
 							souhaité</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="lieuLivraisonSouhaite" type="text" class="form-control "
+								id="lieuLivraisonSouhaite" placeholder="lieuLivraisonSouhaite" />
+							<form:errors path="lieuLivraisonSouhaite" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="responsableProjet">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Responsable projet</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="responsableProjet" type="text" class="form-control "
+								id="responsableProjet" placeholder="responsableProjet" />
+							<form:errors path="responsableProjet" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="datePaiement">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Date de paiement</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="datePaiement" type="text" class="form-control "
+								id="datePaiement" placeholder="datePaiement" />
+							<form:errors path="datePaiement" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 
-			<spring:bind path="username">
+			<spring:bind path="modePaiementProj">
 				<div class="col-sm-5 ">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Mode de paiement</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="modePaiementProj" type="text" class="form-control "
+								id="modePaiementProj" placeholder="modePaiementProj" />
+							<form:errors path="modePaiementProj" class="control-label" />
 						</div>
 					</div>
 				</div>
@@ -175,14 +175,14 @@
 		<h2>Liste de articles</h2>
 		<!--Ajout template Article -->
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="fournisseur">
 				<div class="col-sm-6 col-sm-offset-3">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Fournisseur</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="fournisseur" type="text" class="form-control "
+								id="fournisseur" placeholder="fournisseur" />
+							<form:errors path="fournisseur" class="control-label" />
 						</div>
 					</div>
 				</div>
@@ -190,68 +190,68 @@
 		</div>
 		<h2>Contact fournisseur</h2>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="portableFournisseur">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Portable</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="portableFournisseur" type="text" class="form-control "
+								id="portableFournisseur" placeholder="portableFournisseur" />
+							<form:errors path="portableFournisseur" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 
-			<spring:bind path="username">
+			<spring:bind path="fixeFournisseur">
 				<div class="col-sm-5 ">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Fixe</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="fixeFournisseur" type="text" class="form-control "
+								id="fixeFournisseur" placeholder="fixeFournisseur" />
+							<form:errors path="fixeFournisseur" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="emailFournisseur">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Email</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="emailFournisseur" type="text" class="form-control "
+								id="emailFournisseur" placeholder="emailFournisseur" />
+							<form:errors path="emailFournisseur" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 
-			<spring:bind path="username">
+			<spring:bind path="adresseFournisseur">
 				<div class="col-sm-5 ">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Adresse</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="adresseFournisseur" type="text" class="form-control "
+								id="adresseFournisseur" placeholder="adresseFournisseur" />
+							<form:errors path="adresseFournisseur" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="totalHT">
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Total HT</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="totalHT" type="text" class="form-control "
+								id="totalHT" placeholder="totalHT" />
+							<form:errors path="totalHT" class="control-label" />
 						</div>
 					</div>
 				</div>
@@ -260,84 +260,34 @@
 		<br>
 		<br>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="totalHT">
 				<div class="col-sm-6 col-sm-offset-3">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Total HT</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="totalHT" type="text" class="form-control "
+								id="totalHT" placeholder="totalHT" />
+							<form:errors path="totalHT" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
 		<div class="row">
-			<spring:bind path="username">
+			<spring:bind path="toralTTC">
 				<div class="col-sm-6 col-sm-offset-3">
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Total TTC</label>
 						<div class="col-sm-6">
-							<form:input path="username" type="text" class="form-control "
-								id="username" placeholder="username" />
-							<form:errors path="username" class="control-label" />
+							<form:input path="toralTTC" type="text" class="form-control "
+								id="toralTTC" placeholder="toralTTC" />
+							<form:errors path="toralTTC" class="control-label" />
 						</div>
 					</div>
 				</div>
 			</spring:bind>
 		</div>
-		<spring:bind path="email">
-			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Email</label>
-				<div class="col-sm-10">
-					<form:input path="email" class="form-control" id="email"
-						placeholder="Email" />
-					<form:errors path="email" class="control-label" />
-				</div>
-			</div>
-		</spring:bind>
-
-		<spring:bind path="password">
-			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Password</label>
-				<div class="col-sm-10">
-					<form:password path="password" class="form-control" id="password"
-						placeholder="password" />
-					<form:errors path="password" class="control-label" />
-				</div>
-			</div>
-		</spring:bind>
-
-		<spring:bind path="password">
-			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">confirm Password</label>
-				<div class="col-sm-10">
-					<form:password path="password" class="form-control" id="password"
-						placeholder="password" />
-					<form:errors path="password" class="control-label" />
-				</div>
-			</div>
-		</spring:bind>
-
-
-
-
-
-		<spring:bind path="sex">
-			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Sex</label>
-				<div class="col-sm-10">
-					<label class="radio-inline"> <form:radiobutton path="sex"
-							value="M" /> Male
-					</label> <label class="radio-inline"> <form:radiobutton path="sex"
-							value="F" /> Female
-					</label> <br />
-					<form:errors path="sex" class="control-label" />
-				</div>
-			</div>
-		</spring:bind>
-
+		
 
 
 		<!-- Custom Script, Spring map to model via 'name' attribute
