@@ -4,8 +4,13 @@
 <title>Spring MVC Form Handling Example</title>
 
 <!-- Sources Bootstrap et JQuery -->
-<link rel="stylesheet"
+<!-- link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+-->
+
+
+<link rel="stylesheet" href="resources/bootstrap.min.css" type="text/css">
+
 
 
 <!-- link rel="stylesheet"
@@ -39,9 +44,9 @@
 				Data Manage</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="<spring:url value="/services/"/>">NAV 1</a></li>
+			<li><a href="<spring:url value="/register/"/>">Inscription</a></li>
 			<li><a href="<spring:url value="/appointments/"/>">NAV 2</a></li>
-			<li><a href="<spring:url value="/bc/"/>">NAV 3</a></li>
+			<li><a href="<spring:url value="/schedule/"/>">NAV 3</a></li>
 			<li><a href="<spring:url value="/login/"/>">Sign In</a></li>
 		</ul>
 	</div>

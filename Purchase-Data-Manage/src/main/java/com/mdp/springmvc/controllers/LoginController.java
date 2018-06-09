@@ -3,14 +3,16 @@ package com.mdp.springmvc.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.mdp.beans.BonCommande;
+import com.mdp.beans.BonCommandeRequest;
 import com.mdp.beans.User;
 import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
@@ -23,13 +25,14 @@ public class LoginController {
 	//
 
 	UserServiceImpl userService=new UserServiceImpl();
+	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 
 	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
-		
-		
 
+
+		
 		ModelAndView mav = new ModelAndView("login");
 		Login login =new Login();
 		mav.addObject(login);
@@ -37,8 +40,8 @@ public class LoginController {
 
 		return mav;
 	}
-	
-	
+
+
 
 	@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
 
@@ -50,7 +53,7 @@ public class LoginController {
 
 		mav.addObject("firstname", login.getUsername());
 		mav.addObject("password", login.getPassword());
-		
+
 		System.out.println(login.getUsername()+" "+login.getPassword());
 		User user = userService.validateUser(login);
 
@@ -70,25 +73,17 @@ public class LoginController {
 			 * 
 			 * To DO
 			 */
+			BonCommandeRequest commandeRequest=new BonCommandeRequest();
 			System.out.println("firstname: "+user.getFirstname());
 			System.out.println("password: "+user.getPassword());
 			mav.addObject("firstname", user.getFirstname());
 			mav.addObject("password", user.getPassword());
 			mav.addObject("commande", user);
+			mav.addObject("bonCommandeRequest", commandeRequest);
 		}
 
 		return mav;
 
-	}
-	@RequestMapping(value = "/bc", method = RequestMethod.GET)
-	public ModelAndView bc(HttpServletRequest request, HttpServletResponse response) {
-		
-		User user = new User();
-
-		ModelAndView mav = new ModelAndView("bc");
-		mav.addObject("commande", user);
-
-		return mav;
 	}
 
 

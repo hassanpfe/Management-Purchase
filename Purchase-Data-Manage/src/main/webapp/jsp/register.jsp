@@ -1,59 +1,119 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<html>
+<html lang="en">
+
+
+
+<link rel="stylesheet" href="../resources/bootstrap.min.css"
+	type="text/css">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registration</title>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 	<form:form id="regForm" modelAttribute="user" action="registerProcess"
 		method="post">
-		<table align="center">
-			<tr>
-				<td><form:label path="username">Username</form:label></td>
-				<td><form:input path="username" name="username" id="username" />
-				</td>
-			</tr>
-			<tr>
-				<td><form:label path="password">Password</form:label></td>
-				<td><form:password path="password" name="password"
-						id="password" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="firstname">FirstName</form:label></td>
-				<td><form:input path="firstname" name="firstname"
-						id="firstname" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="lastname">LastName</form:label></td>
-				<td><form:input path="lastname" name="lastname" id="lastname" />
-				</td>
-			</tr>
-			<tr>
-				<td><form:label path="email">Email</form:label></td>
-				<td><form:input path="email" name="email" id="email" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="address">Address</form:label></td>
-				<td><form:input path="address" name="address" id="address" />
-				</td>
-			</tr>
-			<tr>
-				<td><form:label path="phone">Phone</form:label></td>
-				<td><form:input path="phone" name="phone" id="phone" /></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><form:button id="register" name="register">Register</form:button>
-				</td>
-			</tr>
-			<tr></tr>
-			<tr>
-				<td></td>
-				<td><a href="home.jsp">Home</a></td>
-			</tr>
-		</table>
+		<br>
+		<div class="row">
+		
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Identifient</label>
+						<div class="col-sm-5">
+							<form:input path="Username" type="text" class="form-control "
+								id="username" placeholder="username" />
+				</div>
+				</div>
+				</div>
+				<div class="row">
+		
+		<br>
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Mot de passe</label>
+						<div class="col-sm-5">
+							<form:input path="password" type="text" class="form-control "
+								id="password" placeholder="password" />
+				</div>
+				</div>
+				</div>
+				
+				<div class="row">
+		
+		<br>
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Nom</label>
+						<div class="col-sm-5">
+							<form:input path="Lastname" type="text" class="form-control "
+								id="LastName" placeholder="LastName" />
+				</div>
+				</div>
+				</div>
+				
+						<div class="row">
+		
+		<br>
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Prénom</label>
+						<div class="col-sm-5">
+							<form:input path="Firstname" type="text" class="form-control "
+								id="Prenom" placeholder="Prenom" />
+				</div>
+				</div>
+				</div>
+				
+				<div class="row">
+		<br>
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Email</label>
+						<div class="col-sm-5">
+							<form:input path="Email" type="text" class="form-control "
+								id="Email" placeholder="Email" />
+				</div>
+				</div>
+				</div>
+			
+			
+				
+				<div class="row">
+		<br>
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Adresse</label>
+						<div class="col-sm-5">
+							<form:input path="Address" type="text" class="form-control "
+								id="Adresse" placeholder="Adresse" />
+				</div>
+				</div>
+				</div>
+				
+				
+				<div class="row">
+		<br>
+		
+		<div class="col-sm-5 col-sm-offset-1">
+		<label class="col-sm-6 control-label">Fonction</label>
+						<div class="col-sm-5">
+							<form:input path="Phone" type="text" class="form-control "
+								id="Fonction" placeholder="Fonction" />
+				</div>
+				</div>
+				</div>
+			
+				
+				
+				<div class="col-sm-5 col-sm-offset-1">
+			    <button type="submit" id="register" class="btn btn-primary">Enregistrer</button>
+				</div>
+			
+			
+		
 	</form:form>
 </body>
 </html>
