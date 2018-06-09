@@ -32,26 +32,7 @@ public class LoginController {
 	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
 
 
-		if(logger.isDebugEnabled()){
-
-			logger.debug("appel au controlleur /login. Debug");
-		}
-		if(logger.isErrorEnabled()){
-
-			logger.debug("appel au controlleur /login. Error");
-		}
-		if(logger.isTraceEnabled()){
-
-			logger.debug("appel au controlleur /login. Trace");
-		}
-		if(logger.isWarnEnabled()){
-
-			logger.debug("appel au controlleur /login. Warn");
-		}
-		if(logger.isInfoEnabled()){
-
-			logger.debug("appel au controlleur /login. Info");
-		}
+		
 		ModelAndView mav = new ModelAndView("login");
 		Login login =new Login();
 		mav.addObject(login);

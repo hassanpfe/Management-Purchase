@@ -11,4 +11,5 @@
 <property name="email" value="user1@user.user"></property>
 <property name="address" value="user1 rue user 1"></property>
 </bean>
+<!--  bean id="utils" class="com.mdp.utilities.Utils"></bean>-->
 </beans>
