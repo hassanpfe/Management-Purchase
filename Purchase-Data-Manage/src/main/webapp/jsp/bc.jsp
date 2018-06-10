@@ -75,20 +75,7 @@
 				</div>
 			</spring:bind>
 		</div>
-		<div class="row">
-			<spring:bind path="fonction">
-				<div class="col-sm-5 col-sm-offset-1">
-					<div class="form-group ${status.error ? 'has-error' : ''}">
-						<label class="col-sm-6 control-label">Fonction</label>
-						<div class="col-sm-6">
-							<form:input path="fonction" type="text" class="form-control "
-								id="fonction" placeholder="fonction" />
-							<form:errors path="fonction" class="control-label" />
-						</div>
-					</div>
-				</div>
-			</spring:bind>
-		</div>
+
 		<div class="row">
 			<spring:bind path="modePaiement">
 				<div class="col-sm-5 col-sm-offset-1">
@@ -159,20 +146,16 @@
 				</div>
 			</spring:bind>
 
-			<spring:bind path="modePaiementProj">
-				<div class="col-sm-5 ">
-					<div class="form-group ${status.error ? 'has-error' : ''}">
-						<label class="col-sm-6 control-label">Mode de paiement</label>
-						<div class="col-sm-6">
-							<form:input path="modePaiementProj" type="text" class="form-control "
-								id="modePaiementProj" placeholder="modePaiementProj" />
-							<form:errors path="modePaiementProj" class="control-label" />
-						</div>
-					</div>
-				</div>
-			</spring:bind>
+					
 		</div>
-		<h2>Liste de articles</h2>
+		<h2>Liste des articles</h2>
+		<div class="row">
+
+<div class="col-sm-4 col-sm-offset-2">
+			<button type="submit" id="register" class="btn btn-primary">Ajouter</button>
+		</div>
+			
+		</div>
 		<!--Ajout template Article -->
 		<div class="row">
 			<spring:bind path="fournisseur">
