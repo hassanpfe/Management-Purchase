@@ -1,7 +1,7 @@
 package com.mdp.beans;
 
 public class User {
-	private String id;
+	private int id;
 	private String username;
 	private String password;
 	private String firstname;
@@ -15,7 +15,8 @@ public class User {
 		
 	}
 	public User(String username, String password, String firstname,
-			String lastname, String email, String address, String phone) {
+			String lastname, String email, String address, String phone , String fonction,String sex) {
+		
 		this.username = username;
 		this.password = password;
 		this.firstname = firstname;
@@ -23,6 +24,8 @@ public class User {
 		this.email = email;
 		this.address = address;
 		this.phone = phone;
+		this.fonction = fonction;
+		this.sex=sex;
 	}
 	public String getUsername() {
 		return username;
@@ -72,10 +75,10 @@ public class User {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getFonction() {

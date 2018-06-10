@@ -15,7 +15,7 @@ public  class UserServiceImpl implements IUserService{
 	User user;
 	public User validateUser(Login login) {
 		// TODO Auto-generated method stub
-		
+
 		//user.setFirstname(login.getUsername());
 		//user.setPassword(login.getPassword());
 		/*
@@ -24,13 +24,13 @@ public  class UserServiceImpl implements IUserService{
 		 * retourner null si info erronées
 		 */
 		Session session = HibernateUtil.getSessionFactory().openSession();
-        
-        
-        session.beginTransaction();
-        
-    	
-        user=(User)session.get(User.class, login.getUsername());
-        session.getTransaction().commit();
+
+
+		session.beginTransaction();
+
+
+		user=(User)session.get(User.class, login.getUsername());
+		session.getTransaction().commit();
 
 
 		return user;
@@ -38,6 +38,15 @@ public  class UserServiceImpl implements IUserService{
 
 	public User registerUser(User user) {
 		// TODO Auto-generated method stub
+		Session session = HibernateUtil.getSessionFactory().openSession();
+
+
+		session.beginTransaction();
+
+
+		session.save(user);
+		session.getTransaction().commit();
+
 		return null;
 	}
 

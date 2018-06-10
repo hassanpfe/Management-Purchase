@@ -17,6 +17,7 @@ import antlr.Utils;
 import com.mdp.beans.BonCommande;
 import com.mdp.beans.BonCommandeRequest;
 import com.mdp.beans.User;
+import com.mdp.users.servicesImpl.UserServiceImpl;
 import com.mdp.utilities.ServiceMdpHelper;
 
 
@@ -33,21 +34,24 @@ public class RegistrationController {
 	public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
 
 		ModelAndView mav = new ModelAndView("register");
-
+		
 		mav.addObject("user", new User());
 
 		return mav;
 
 	}
 
-	@RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
+	@RequestMapping(value = "/register/registerProcess", method = RequestMethod.POST)
 
 	public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
 
 			@ModelAttribute("user") User user) {
 
 		//userService.register(user);
-
+		logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(user));
+		UserServiceImpl serviceUser=new UserServiceImpl();
+		serviceUser.registerUser(user);
+		logger.debug("User Added");
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 
 	}
@@ -65,4 +69,6 @@ public class RegistrationController {
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 
 	}
+	
+	
 }

@@ -14,106 +14,129 @@
 <title>Registration</title>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 	<form:form id="regForm" modelAttribute="user" action="registerProcess"
 		method="post">
 		<br>
 		<div class="row">
+
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Identifient</label>
+				<div class="col-sm-5">
+					<form:input path="username" type="text" class="form-control "
+						id="username" placeholder="username" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+
+			<br>
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Mot de passe</label>
+				<div class="col-sm-5">
+					<form:input path="password" type="text" class="form-control "
+						id="password" placeholder="password" />
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Nom</label>
+				<div class="col-sm-5">
+					<form:input path="Lastname" type="text" class="form-control "
+						id="LastName" placeholder="LastName" />
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Prénom</label>
+				<div class="col-sm-5">
+					<form:input path="Firstname" type="text" class="form-control "
+						id="Prenom" placeholder="Prenom" />
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Email</label>
+				<div class="col-sm-5">
+					<form:input path="Email" type="text" class="form-control "
+						id="Email" placeholder="Email" />
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Adresse</label>
+				<div class="col-sm-5">
+					<form:input path="Address" type="text" class="form-control "
+						id="Adresse" placeholder="Adresse" />
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Fonction</label>
+				<div class="col-sm-5">
+					<form:input path="fonction" type="text" class="form-control "
+						id="fonction" placeholder="fonction" />
+				</div>
+			</div>
+		</div>
 		
-		
+		<div class="row">
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Phone</label>
+				<div class="col-sm-5">
+					<form:input path="phone" type="text" class="form-control "
+						id="phone" placeholder="phone" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<br>
+
+			<div class="col-sm-5 col-sm-offset-1">
+				<label class="col-sm-6 control-label">Sex</label>
+				<div class="col-sm-5">
+					<form:input path="sex" type="text" class="form-control "
+						id="sex" placeholder="sex" />
+				</div>
+			</div>
+		</div>
+
+
+
 		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Identifient</label>
-						<div class="col-sm-5">
-							<form:input path="Username" type="text" class="form-control "
-								id="username" placeholder="username" />
-				</div>
-				</div>
-				</div>
-				<div class="row">
-		
-		<br>
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Mot de passe</label>
-						<div class="col-sm-5">
-							<form:input path="password" type="text" class="form-control "
-								id="password" placeholder="password" />
-				</div>
-				</div>
-				</div>
-				
-				<div class="row">
-		
-		<br>
-		
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Nom</label>
-						<div class="col-sm-5">
-							<form:input path="Lastname" type="text" class="form-control "
-								id="LastName" placeholder="LastName" />
-				</div>
-				</div>
-				</div>
-				
-						<div class="row">
-		
-		<br>
-		
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Prénom</label>
-						<div class="col-sm-5">
-							<form:input path="Firstname" type="text" class="form-control "
-								id="Prenom" placeholder="Prenom" />
-				</div>
-				</div>
-				</div>
-				
-				<div class="row">
-		<br>
-		
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Email</label>
-						<div class="col-sm-5">
-							<form:input path="Email" type="text" class="form-control "
-								id="Email" placeholder="Email" />
-				</div>
-				</div>
-				</div>
-			
-			
-				
-				<div class="row">
-		<br>
-		
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Adresse</label>
-						<div class="col-sm-5">
-							<form:input path="Address" type="text" class="form-control "
-								id="Adresse" placeholder="Adresse" />
-				</div>
-				</div>
-				</div>
-				
-				
-				<div class="row">
-		<br>
-		
-		<div class="col-sm-5 col-sm-offset-1">
-		<label class="col-sm-6 control-label">Fonction</label>
-						<div class="col-sm-5">
-							<form:input path="Phone" type="text" class="form-control "
-								id="Fonction" placeholder="Fonction" />
-				</div>
-				</div>
-				</div>
-			
-				
-				
-				<div class="col-sm-5 col-sm-offset-1">
-			    <button type="submit" id="register" class="btn btn-primary">Enregistrer</button>
-				</div>
-			
-			
-		
+			<button type="submit" id="register" class="btn btn-primary">Enregistrer</button>
+		</div>
+
+
+
 	</form:form>
 </body>
 </html>
