@@ -16,8 +16,7 @@
 <body>
 <jsp:include page="header.jsp" />
 
-<form:form id="AddProductForm" modelAttribute="user" action="registerProcess"
-		method="post">
+  <form:form id="addProduct" method="post">
 		
 		
 		<br>

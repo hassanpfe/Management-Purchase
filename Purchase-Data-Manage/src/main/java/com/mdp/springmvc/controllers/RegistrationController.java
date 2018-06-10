@@ -41,6 +41,17 @@ public class RegistrationController {
 
 	}
 
+	@RequestMapping(value = "/addproduct", method = RequestMethod.GET)
+
+	public ModelAndView ShowAddproduct(HttpServletRequest request, HttpServletResponse response) {
+
+		ModelAndView mav1 = new ModelAndView("AddProduct");
+		
+		//mav.addObject("user", new User());
+
+		return mav1;
+
+	}
 	@RequestMapping(value = "/register/registerProcess", method = RequestMethod.POST)
 
 	public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
