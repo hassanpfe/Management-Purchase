@@ -180,8 +180,11 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Fournisseur</label>
 						<div class="col-sm-6">
-							<form:input path="fournisseur" type="text" class="form-control "
-								id="fournisseur" placeholder="fournisseur" />
+							<select class="form-control list-group" id="sel1">
+						<option></option>
+						<option>Fourniture</option>
+						
+					</select>
 							<form:errors path="fournisseur" class="control-label" />
 						</div>
 					</div>

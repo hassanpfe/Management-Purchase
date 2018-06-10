@@ -9,7 +9,7 @@
 	type="text/css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Article</title>
 </head>
 
 
@@ -25,10 +25,9 @@
 				<label class="col-sm-3 control-label">Famille</label>
 				<div class="col-sm-5">
 					<select class="form-control list-group" id="sel1">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
+						<option></option>
+						<option>Fourniture</option>
+						
 					</select>
 				</div>
 			</div>

@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import antlr.Utils;
 
 import com.mdp.beans.BonCommande;
-import com.mdp.beans.BonCommandeRequest;
 import com.mdp.beans.User;
 import com.mdp.users.servicesImpl.UserServiceImpl;
 import com.mdp.utilities.ServiceMdpHelper;
@@ -71,7 +70,7 @@ public class RegistrationController {
 
 	public ModelAndView validateBC(HttpServletRequest request, HttpServletResponse response,
 
-			@ModelAttribute("user") User user,@ModelAttribute("commande") BonCommandeRequest commandeRequest) {
+			@ModelAttribute("user") User user,@ModelAttribute("commande") BonCommande commandeRequest) {
 
 		if(logger.isDebugEnabled()){
 			
