@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mdp.beans.User" table="profil" catalog="management_purchase">
+        <id name="id" type="int">
+         
+            <column name="id"/>       
+           
+        </id>
+        <property name="lastname" type="string">
+            <column name="lastname" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="fonction" length="50" not-null="true" unique="false" />
+        </property>
+       <property name="phone" type="string">
+            <column name="phone" length="50" not-null="true" unique="false" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>
