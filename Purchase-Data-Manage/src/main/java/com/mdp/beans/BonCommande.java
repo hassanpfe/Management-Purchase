@@ -26,14 +26,14 @@ public class BonCommande
 	private String fixeFournisseur;
 	private String emailFournisseur;
 	private String adresseFournisseur;
-	private List articles=new ArrayList();
+	private List<Article> articles=new ArrayList<Article>();
 	private float totalHT;
 	private float toralTTC;
 	
 	
 	
 	
-	
+	public BonCommande() {}
 	
 	
 	public BonCommande(int idBonCommande, String acheteur, String dateCommande,
@@ -41,7 +41,7 @@ public class BonCommande
 			String referenceProjet, String lieuLivraisonSouhaite,
 			String responsableProjet, String datePaiement, String fournisseur,
 			String portableFournisseur, String fixeFournisseur,
-			String emailFournisseur, String adresseFournisseur, List articles,
+			String emailFournisseur, String adresseFournisseur, List<Article> articles,
 			float totalHT, float toralTTC, String commentaire) {
 		super();
 		this.idBonCommande = idBonCommande;
@@ -315,15 +315,15 @@ public class BonCommande
 
 
 
-	public List getArticles() {
-		return articles;
+	public List<Article> getArticles() {
+		return this.articles;
 	}
 
 
 
 
 
-	public void setArticles(List articles) {
+	public void setArticles(List<Article> articles) {
 		this.articles = articles;
 	}
 
@@ -379,7 +379,7 @@ public class BonCommande
 
 
 
-	public BonCommande() {}
+	
 	
 	
 }
