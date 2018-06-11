@@ -73,6 +73,7 @@ public class LoginController {
 			 * To DO
 			 */
 			BonCommande commandeRequest=new BonCommande();
+			commandeRequest.setAcheteur("Hassan");
 			System.out.println("firstname: "+user.getFirstname());
 			System.out.println("password: "+user.getPassword());
 			mav.addObject("firstname", user.getFirstname());

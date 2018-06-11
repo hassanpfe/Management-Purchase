@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import antlr.Utils;
 
+import com.mdp.beans.Article;
 import com.mdp.beans.BonCommande;
 import com.mdp.beans.User;
 import com.mdp.users.servicesImpl.UserServiceImpl;
@@ -46,7 +47,7 @@ public class RegistrationController {
 
 		ModelAndView mav1 = new ModelAndView("AddProduct");
 		
-		//mav.addObject("user", new User());
+		mav1.addObject("article", new Article());
 
 		return mav1;
 

@@ -19,7 +19,7 @@
 <body>
 	<jsp:include page="header.jsp" />
 
-	<form:form id="addProduct" class="form-horizontal" method="post">
+	<form:form id="addProduct" class="form-horizontal" modelAttribute="bonCommandeRequest" method="post">
 
 		<br>
 		<div class="row">
@@ -30,7 +30,7 @@
 					<select class="form-control list-group" id="sel1">
 						<option></option>
 						<option>Fourniture</option>
-						
+
 					</select>
 				</div>
 			</div>
@@ -40,10 +40,10 @@
 			<div class="col-sm-5 ">
 				<label class="col-sm-3 control-label">Remise</label>
 				<div class="col-sm-5">
-					<div >
-						<label class="radio-inline"><input type="radio" name="Remise">Oui</label>
-					
-						<label class="radio-inline"><input type="radio" name="Remise">Non</label>
+					<div>
+						<label class="radio-inline"><input type="radio"
+							name="Remise">Oui</label> <label class="radio-inline"><input
+							type="radio" name="Remise">Non</label>
 					</div>
 				</div>
 			</div>
@@ -63,36 +63,36 @@
 					</select>
 				</div>
 			</div>
-			
+
 			<div class="col-sm-5 ">
 				<label class="col-sm-3 control-label">Valeur Remise</label>
 				<div class="col-sm-5">
 					<form:input path="remise" type="text" class="form-control "
-								id="remise" placeholder="remise" />
+						id="remise" placeholder="remise" />
 				</div>
 			</div>
 		</div>
-<br>
+		<br>
 		<div class="row">
 
-			
+
 			<div class="col-sm-5 col-sm-offset-1">
 				<label class="col-sm-3 control-label">Désignation 1</label>
 				<div class="col-sm-5">
-					<form:input  path="design1" type="text" class="form-control " id="designation1"
-						placeholder="designation1" />
+					<form:input path="design1" type="text" class="form-control "
+						id="designation1" placeholder="designation1" />
 				</div>
 			</div>
 			<div class="col-sm-5 ">
 				<label class="col-sm-3 control-label">Qunatitè</label>
 				<div class="col-sm-5">
-					<form:input path="qte" type="text" class="form-control " id="Quantite"
-						placeholder="Quantite" />
+					<form:input path="qte" type="text" class="form-control "
+						id="Quantite" placeholder="Quantite" />
 				</div>
-			</div>	
+			</div>
 		</div>
-		
-		
+
+
 		<br>
 		<div class="row">
 
@@ -100,16 +100,16 @@
 			<div class="col-sm-5 col-sm-offset-1">
 				<label class="col-sm-3 control-label">Désignation 2</label>
 				<div class="col-sm-5">
-					<form:input path="design2" type="text" class="form-control " id="designation2"
-						placeholder="designation2" />
+					<form:input path="design2" type="text" class="form-control "
+						id="designation2" placeholder="designation2" />
 				</div>
 			</div>
-			
+
 			<div class="col-sm-5 ">
 				<label class="col-sm-3 control-label">prix unitairé</label>
 				<div class="col-sm-5">
-					<form:input  path="prix" type="text" class="form-control " id="PrixUnitaire"
-						placeholder="PrixUnitaire" />
+					<form:input path="prix" type="text" class="form-control "
+						id="PrixUnitaire" placeholder="PrixUnitaire" />
 				</div>
 			</div>
 		</div>
@@ -121,8 +121,8 @@
 			<div class="col-sm-5 col-sm-offset-1">
 				<label class="col-sm-3 control-label">Désignation 3</label>
 				<div class="col-sm-5">
-					<form:input path="design3" type="text" class="form-control " id="designation3"
-						placeholder="designation3" />
+					<form:input path="design3" type="text" class="form-control "
+						id="designation3" placeholder="designation3" />
 				</div>
 			</div>
 		</div>
@@ -131,18 +131,18 @@
 
 
 
-	
+
 
 		<br>
 		<div class="row">
 
-<div class="col-sm-4 col-sm-offset-2">
-			<button type="submit" id="register" class="btn btn-primary">Ajouter</button>
-		</div>
-			
+			<div class="col-sm-4 col-sm-offset-2">
+				<button type="submit" id="register" class="btn btn-primary">Ajouter</button>
+			</div>
+
 		</div>
 		<br>
-		
+
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -156,27 +156,27 @@
 
 			<c:forEach var="user" items="${users}">
 				<tr>
-					<td>
-						${user.id}
-					</td>
+					<td>${user.id}</td>
 					<td>${user.name}</td>
 					<td>${user.email}</td>
-					<td><c:forEach var="framework" items="${user.framework}" varStatus="loop">
+					<td><c:forEach var="framework" items="${user.framework}"
+							varStatus="loop">
 						${framework}
     					<c:if test="${not loop.last}">,</c:if>
 						</c:forEach></td>
-					<td>
-						<spring:url value="/users/${user.id}" var="userUrl" />
-						<spring:url value="/users/${user.id}/delete" var="deleteUrl" /> 
-						<spring:url value="/users/${user.id}/update" var="updateUrl" />
-						
+					<td><spring:url value="/users/${user.id}" var="userUrl" /> <spring:url
+							value="/users/${user.id}/delete" var="deleteUrl" /> <spring:url
+							value="/users/${user.id}/update" var="updateUrl" />
+
 						<button class="btn btn-info" onclick="location.href='${userUrl}'">Query</button>
-						<button class="btn btn-primary" onclick="location.href='${updateUrl}'">Update</button>
-						<button class="btn btn-danger" onclick="this.disabled=true;post('${deleteUrl}')">Delete</button></td>
+						<button class="btn btn-primary"
+							onclick="location.href='${updateUrl}'">Update</button>
+						<button class="btn btn-danger"
+							onclick="this.disabled=true;post('${deleteUrl}')">Delete</button></td>
 				</tr>
 			</c:forEach>
 		</table>
-		
+
 
 	</form:form>
 </body>

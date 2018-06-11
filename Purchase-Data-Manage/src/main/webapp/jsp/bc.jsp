@@ -6,15 +6,17 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<script src="<c:url value="/resources/main.js" />"></script>
+</head>
 
-
-<jsp:include page="header.jsp" />
+<jsp:include page="header.jsp"/>
 <div class="container">
 
 
 	<h1>Bon de Commande</h1>
 
-	<br/>
+	<br />
 
 	<spring:url value="/bcValidate" var="userActionUrl" />
 
@@ -28,8 +30,8 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Numéro du BC</label>
 						<div class="col-sm-6">
-							<form:input path="idBonCommande" type="text" class="form-control "
-								id="username" placeholder="idBonCommande" />
+							<form:input path="idBonCommande" type="text"
+								class="form-control " id="username" placeholder="idBonCommande" />
 							<form:errors path="idBonCommande" class="control-label" />
 						</div>
 					</div>
@@ -54,7 +56,7 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Acheteur</label>
 						<div class="col-sm-6">
-							<form:input path="acheteur" type="text" class="form-control "
+							<form:input path="acheteur" readonly="true" type="text" class="form-control "
 								id="acheteur" placeholder="acheteur" />
 							<form:errors path="acheteur" class="control-label" />
 						</div>
@@ -67,8 +69,9 @@
 						<label class="col-sm-6 control-label">Date Livraison
 							Souhaitée</label>
 						<div class="col-sm-6">
-							<form:input path="dateLivraisonSouhaite" type="text" class="form-control "
-								id="dateLivraisonSouhaite" placeholder="dateLivraisonSouhaite" />
+							<form:input path="dateLivraisonSouhaite" type="text"
+								class="form-control " id="dateLivraisonSouhaite"
+								placeholder="dateLivraisonSouhaite" />
 							<form:errors path="dateLivraisonSouhaite" class="control-label" />
 						</div>
 					</div>
@@ -97,8 +100,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Référence du projet</label>
 						<div class="col-sm-6">
-							<form:input path="referenceProjet" type="text" class="form-control "
-								id="referenceProjet" placeholder="referenceProjet" />
+							<form:input path="referenceProjet" type="text"
+								class="form-control " id="referenceProjet"
+								placeholder="referenceProjet" />
 							<form:errors path="referenceProjet" class="control-label" />
 						</div>
 					</div>
@@ -110,8 +114,9 @@
 						<label class="col-sm-6 control-label">Lieu de livraison
 							souhaité</label>
 						<div class="col-sm-6">
-							<form:input path="lieuLivraisonSouhaite" type="text" class="form-control "
-								id="lieuLivraisonSouhaite" placeholder="lieuLivraisonSouhaite" />
+							<form:input path="lieuLivraisonSouhaite" type="text"
+								class="form-control " id="lieuLivraisonSouhaite"
+								placeholder="lieuLivraisonSouhaite" />
 							<form:errors path="lieuLivraisonSouhaite" class="control-label" />
 						</div>
 					</div>
@@ -124,8 +129,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Responsable projet</label>
 						<div class="col-sm-6">
-							<form:input path="responsableProjet" type="text" class="form-control "
-								id="responsableProjet" placeholder="responsableProjet" />
+							<form:input path="responsableProjet" type="text"
+								class="form-control " id="responsableProjet"
+								placeholder="responsableProjet" />
 							<form:errors path="responsableProjet" class="control-label" />
 						</div>
 					</div>
@@ -146,15 +152,15 @@
 				</div>
 			</spring:bind>
 
-					
+
 		</div>
 		<h2>Liste des articles</h2>
 		<div class="row">
 
-<div class="col-sm-4 col-sm-offset-2">
-			<button type="submit" id="register" class="btn btn-primary">Ajouter</button>
-		</div>
-			
+			<div class="col-sm-4 col-sm-offset-2">
+				<button type="button" id="addArticle" class="btn btn-primary">Ajouter</button>
+			</div>
+
 		</div>
 		<!--Ajout template Article -->
 		<div class="row">
@@ -164,10 +170,10 @@
 						<label class="col-sm-6 control-label">Fournisseur</label>
 						<div class="col-sm-6">
 							<select class="form-control list-group" id="sel1">
-						<option></option>
-						<option>Fourniture</option>
-						
-					</select>
+								<option></option>
+								<option>Fourniture</option>
+
+							</select>
 							<form:errors path="fournisseur" class="control-label" />
 						</div>
 					</div>
@@ -181,8 +187,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Portable</label>
 						<div class="col-sm-6">
-							<form:input path="portableFournisseur" type="text" class="form-control "
-								id="portableFournisseur" placeholder="portableFournisseur" />
+							<form:input path="portableFournisseur" type="text"
+								class="form-control " id="portableFournisseur"
+								placeholder="portableFournisseur" />
 							<form:errors path="portableFournisseur" class="control-label" />
 						</div>
 					</div>
@@ -194,8 +201,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Fixe</label>
 						<div class="col-sm-6">
-							<form:input path="fixeFournisseur" type="text" class="form-control "
-								id="fixeFournisseur" placeholder="fixeFournisseur" />
+							<form:input path="fixeFournisseur" type="text"
+								class="form-control " id="fixeFournisseur"
+								placeholder="fixeFournisseur" />
 							<form:errors path="fixeFournisseur" class="control-label" />
 						</div>
 					</div>
@@ -208,8 +216,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Email</label>
 						<div class="col-sm-6">
-							<form:input path="emailFournisseur" type="text" class="form-control "
-								id="emailFournisseur" placeholder="emailFournisseur" />
+							<form:input path="emailFournisseur" type="text"
+								class="form-control " id="emailFournisseur"
+								placeholder="emailFournisseur" />
 							<form:errors path="emailFournisseur" class="control-label" />
 						</div>
 					</div>
@@ -221,8 +230,9 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Adresse</label>
 						<div class="col-sm-6">
-							<form:input path="adresseFournisseur" type="text" class="form-control "
-								id="adresseFournisseur" placeholder="adresseFournisseur" />
+							<form:input path="adresseFournisseur" type="text"
+								class="form-control " id="adresseFournisseur"
+								placeholder="adresseFournisseur" />
 							<form:errors path="adresseFournisseur" class="control-label" />
 						</div>
 					</div>
@@ -273,7 +283,7 @@
 				</div>
 			</spring:bind>
 		</div>
-		
+
 
 
 		<!-- Custom Script, Spring map to model via 'name' attribute
