@@ -16,6 +16,7 @@ import antlr.Utils;
 
 import com.mdp.beans.Article;
 import com.mdp.beans.BonCommande;
+import com.mdp.beans.LigneComande;
 import com.mdp.beans.User;
 import com.mdp.users.servicesImpl.UserServiceImpl;
 import com.mdp.utilities.ServiceMdpHelper;
@@ -23,18 +24,18 @@ import com.mdp.utilities.ServiceMdpHelper;
 
 @Controller
 public class RegistrationController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 	//	  @Autowired
 	//
 	//	  public UserService userService;
-	
+
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 
 	public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
 
 		ModelAndView mav = new ModelAndView("register");
-		
+
 		mav.addObject("user", new User());
 
 		return mav;
@@ -46,8 +47,8 @@ public class RegistrationController {
 	public ModelAndView ShowAddproduct(HttpServletRequest request, HttpServletResponse response) {
 
 		ModelAndView mav1 = new ModelAndView("AddProduct");
-		
-		mav1.addObject("article", new Article());
+
+		mav1.addObject("article", new LigneComande());
 
 		return mav1;
 
@@ -74,12 +75,27 @@ public class RegistrationController {
 			@ModelAttribute("user") User user,@ModelAttribute("commande") BonCommande commandeRequest) {
 
 		if(logger.isDebugEnabled()){
-			
+
 			logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(commandeRequest));
 		}
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 
 	}
-	
-	
+
+	@RequestMapping(value = "/addproduct/addProduct", method = RequestMethod.POST)
+
+	public void addProduct(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("commande") LigneComande commandeRequest) {
+
+		ModelAndView mav1 = new ModelAndView();
+		if(logger.isDebugEnabled()){
+
+			logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(commandeRequest));
+		}
+		mav1.addObject("article", new LigneComande());
+
+		
+
+	}
+
+
 }
