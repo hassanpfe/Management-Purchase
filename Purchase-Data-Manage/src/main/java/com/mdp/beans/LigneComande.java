@@ -36,6 +36,118 @@ public class LigneComande
 
 
 
+	public int getIdBonCommande() {
+		return idBonCommande;
+	}
+
+
+
+
+	public void setIdBonCommande(int idBonCommande) {
+		this.idBonCommande = idBonCommande;
+	}
+
+
+
+
+	public int getIdArticle() {
+		return idArticle;
+	}
+
+
+
+
+	public void setIdArticle(int idArticle) {
+		this.idArticle = idArticle;
+	}
+
+
+
+
+	public boolean isRemise() {
+		return remise;
+	}
+
+
+
+
+	public void setRemise(boolean remise) {
+		this.remise = remise;
+	}
+
+
+
+
+	public float getPrixUnitaire() {
+		return prixUnitaire;
+	}
+
+
+
+
+	public void setPrixUnitaire(float prixUnitaire) {
+		this.prixUnitaire = prixUnitaire;
+	}
+
+
+
+
+	public float getValeurRemise() {
+		return valeurRemise;
+	}
+
+
+
+
+	public void setValeurRemise(float valeurRemise) {
+		this.valeurRemise = valeurRemise;
+	}
+
+
+
+
+	public String getDesignation1() {
+		return designation1;
+	}
+
+
+
+
+	public void setDesignation1(String designation1) {
+		this.designation1 = designation1;
+	}
+
+
+
+
+	public String getDesignation2() {
+		return designation2;
+	}
+
+
+
+
+	public void setDesignation2(String designation2) {
+		this.designation2 = designation2;
+	}
+
+
+
+
+	public String getDesignation3() {
+		return designation3;
+	}
+
+
+
+
+	public void setDesignation3(String designation3) {
+		this.designation3 = designation3;
+	}
+
+
+
+
 	public int getId_bon_commande()
 	{
 		return this.idBonCommande;
