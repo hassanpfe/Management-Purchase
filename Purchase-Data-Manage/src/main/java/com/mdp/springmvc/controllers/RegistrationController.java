@@ -92,6 +92,7 @@ public class RegistrationController {
 			logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(commandeRequest));
 		}
 		mav1.addObject("article", new LigneComande());
+		
 
 		
 

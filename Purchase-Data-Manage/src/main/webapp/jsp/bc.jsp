@@ -10,7 +10,7 @@
 <script src="<c:url value="/resources/main.js" />"></script>
 </head>
 
-<jsp:include page="header.jsp"/>
+<jsp:include page="header.jsp" />
 <div class="container">
 
 
@@ -56,8 +56,8 @@
 					<div class="form-group ${status.error ? 'has-error' : ''}">
 						<label class="col-sm-6 control-label">Acheteur</label>
 						<div class="col-sm-6">
-							<form:input path="acheteur" readonly="true" type="text" class="form-control "
-								id="acheteur" placeholder="acheteur" />
+							<form:input path="acheteur" readonly="true" type="text"
+								class="form-control " id="acheteur" placeholder="acheteur" />
 							<form:errors path="acheteur" class="control-label" />
 						</div>
 					</div>
@@ -158,9 +158,11 @@
 		<div class="row">
 
 			<div class="col-sm-4 col-sm-offset-2">
-				<button type="button" id="addArticle" class="btn btn-primary">Ajouter</button>
+				<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter</button>
 			</div>
-
+			<div id="divArticle" class="hide">
+			<jsp:include page="AddProduct.jsp" />
+			</div>
 		</div>
 		<!--Ajout template Article -->
 		<div class="row">
@@ -320,7 +322,7 @@
 	</form:form>
 
 </div>
-
+<script src="<c:url value='/resources/static/js/article.js'/>"></script>
 <!-- jsp:include page="../fragments/footer.jsp" /> -->
 
 </body>

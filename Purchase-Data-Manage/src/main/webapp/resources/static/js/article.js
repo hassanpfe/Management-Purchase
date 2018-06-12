@@ -34,6 +34,13 @@ document.getElementById("btnAddProduct").addEventListener("click", function(){
 	buildTable(articles);
 });
 
+
+document.getElementById("showAddArticle").addEventListener("click", function(){
+	document.getElementById("divArticle").classList.remove("hide");
+	alert("ok");
+});
+
+
 function buildTable(articles){
 	var tbody=document.getElementById("tbody");
 	for(var i=0;i<articles.length;i++){

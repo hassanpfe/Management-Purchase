@@ -18,7 +18,7 @@
 
 
 <body>
-	<jsp:include page="header.jsp" />
+	<!-- jsp:include page="header.jsp" /> -->
 
 	<form:form id="addProduct" class="form-horizontal"
 		modelAttribute="article" action="addProduct" method="post">

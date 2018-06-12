@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mdp.beans.BonCommande;
+import com.mdp.beans.LigneComande;
 import com.mdp.beans.User;
 import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
@@ -72,6 +73,7 @@ public class LoginController {
 			 * 
 			 * To DO
 			 */
+			
 			BonCommande commandeRequest=new BonCommande();
 			commandeRequest.setAcheteur("Hassan");
 			System.out.println("firstname: "+user.getFirstname());
@@ -80,6 +82,7 @@ public class LoginController {
 			mav.addObject("password", user.getPassword());
 			mav.addObject("commande", user);
 			mav.addObject("bonCommandeRequest", commandeRequest);
+			mav.addObject("article", new LigneComande());
 		}
 
 		return mav;
