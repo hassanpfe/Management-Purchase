@@ -51,6 +51,20 @@ public class RegistrationController {
 
 	}
 
+	@RequestMapping(value = "/bonDeCommande", method = RequestMethod.POST)
+
+	public ModelAndView bc(HttpServletRequest request, HttpServletResponse response){
+
+			//@ModelAttribute("user") User user) {
+			ModelAndView mav = new ModelAndView("bc");
+			mav.addObject("bc");
+
+		//userService.register(user);
+
+		//return new ModelAndView("welcome", "firstname", user.getFirstname());
+			return mav ;
+
+	}
 	@RequestMapping(value = "/bcValidate", method = RequestMethod.POST)
 
 	public ModelAndView validateBC(HttpServletRequest request, HttpServletResponse response,
