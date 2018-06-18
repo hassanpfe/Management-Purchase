@@ -14,6 +14,7 @@ public class BonCommande
 	private String acheteur;
 	private String dateCommande;
 	private String dateLivraisonSouhaite;
+	//test
 	//private String fonction;
 	private String modePaiement;
 	private String statut;
