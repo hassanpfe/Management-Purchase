@@ -18,6 +18,7 @@ import com.mdp.beans.Article;
 import com.mdp.beans.BonCommande;
 import com.mdp.beans.LigneComande;
 import com.mdp.beans.User;
+import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
 import com.mdp.utilities.ServiceMdpHelper;
 
@@ -98,5 +99,19 @@ public class RegistrationController {
 
 	}
 
+	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 
+	public void welcome(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("login") Login login) {
+
+		ModelAndView mav1 = new ModelAndView("welcome");
+		if(logger.isDebugEnabled()){
+
+			logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(login));
+		}
+		mav1.addObject("article", new LigneComande());
+		
+
+		
+
+	}
 }

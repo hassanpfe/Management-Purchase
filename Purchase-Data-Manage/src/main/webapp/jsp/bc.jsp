@@ -154,16 +154,18 @@
 
 
 		</div>
-		<h2>Liste des articles</h2>
-		<div class="row">
 
-			<div class="col-sm-4 col-sm-offset-2">
-				<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter</button>
-			</div>
-			<div id="divArticle" class="hide">
+
+		<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter
+			Article</button>
+
+
+
+		<div class="row"></div>
+		<div id="divArticle" class="hide">
 			<jsp:include page="AddProduct.jsp" />
-			</div>
 		</div>
+
 		<!--Ajout template Article -->
 		<div class="row">
 			<spring:bind path="fournisseur">

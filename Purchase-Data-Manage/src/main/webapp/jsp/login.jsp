@@ -12,21 +12,8 @@
 <title>Purchase Data Manage</title>
 <link rel="stylesheet" href="../resources/bootstrap.min.css"
 	type="text/css">
-<!-- Latest compiled and minified CSS -->
-<!-- link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-<!-- Optional theme -->
-<!--<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
-
-<!-- Latest Jquery -->
-<!--<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
-	type="text/javascript"></script>-->
-<!-- Latest compiled and minified JavaScript -->
-<!--<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
--->
+<link rel="stylesheet" href="../resources/login.css"
+	type="text/css">
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -34,9 +21,10 @@
 		<div class="row">
 			<h1>Identification</h1>
 		</div>
-		<c:url value="/loginProcess" var="loginVar" />
 
-		<form:form id="appointment-form" class="form-horizontal"
+		<c:url value="/j_spring_security_check" var="loginVar" />
+
+		<form:form id="login-form" class="form-horizontal"
 			modelAttribute="login" action="${loginVar}" method="POST">
 			<div class="row">
 				<div class="form-group">
@@ -44,7 +32,7 @@
 						<label for="username" class="control-label">Username: </label>
 					</div>
 					<div class="col-sm-3">
-						<form:input name="username_input" path="username"
+						<form:input name="j_username" id="username" path="username"
 							class="form-control" />
 					</div>
 				</div>
@@ -55,13 +43,24 @@
 						<label for="password" class="control-label">Password: </label>
 					</div>
 					<div class="col-sm-3">
-						<form:input type="password" name="password_input" path="password"
-							class="form-control" />
+						<form:input type="password" id="password" name="j_password"
+							path="password" class="form-control" />
 					</div>
 				</div>
 			</div>
-			<button type="submit" id="btn-save" class="btn btn-primary">Login</button>
-
+			<div class="row">
+			<c:if test="${not empty error}">
+				<div class="col-sm-2 col-sm-offset-2 error">${error}</div>
+			</c:if>
+			<c:if test="${not empty msg}">
+				<div class="col-sm-2 col-sm-offset-2 msg">${msg}</div>
+			</c:if>
+			</div>
+			<div class="row">
+				<button type="submit" id="btn-save" class="btn btn-primary">Login</button>
+			</div>
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
 		</form:form>
 	</div>
 </body>

@@ -10,8 +10,16 @@
 		<!--http-basic/>-->
 		
 		
-		<intercept-url pattern="/test" access="ROLE_USER" />
-		
+		<intercept-url pattern="/test**" access="ROLE_USER" />
+		<form-login 
+		    login-page="/login" 
+		    default-target-url="/welcome" 
+			authentication-failure-url="/login?error" 
+			username-parameter="username"
+			password-parameter="password" />
+		<logout logout-success-url="/login?logout"  />
+		<!-- enable csrf protection -->
+		<csrf/>
 		
 		
 		
@@ -20,8 +28,10 @@
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
+			
 				<user name="mkyong" password="123456" authorities="ROLE_USER" />
 				<user name="hassan" password="hassan" authorities="ROLE_USER,ROLE_FOO" />
+				
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
