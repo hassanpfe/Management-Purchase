@@ -9,7 +9,7 @@
 	<http auto-config="true">
 		<!--http-basic/>-->
 		
-		
+		<intercept-url pattern="/loginProcess" access="ROLE_USER" />
 		<intercept-url pattern="/test**" access="ROLE_USER" />
 		<form-login 
 		    login-page="/login" 
@@ -18,6 +18,15 @@
 			username-parameter="username"
 			password-parameter="password" />
 		<logout logout-success-url="/login?logout"  />
+		<!-- enable csrf protection -->
+		<csrf/>
+		<form-login 
+		    login-page="/login" 
+		    default-target-url="/welcome" 
+			authentication-failure-url="/login?error" 
+			username-parameter="username"
+			password-parameter="password" />
+		<logout logout-success-url="/login?logout" />
 		<!-- enable csrf protection -->
 		<csrf/>
 		
