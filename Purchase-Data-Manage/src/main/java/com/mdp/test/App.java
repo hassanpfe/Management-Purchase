@@ -13,15 +13,16 @@ public class App {
 		 System.out.println("Maven + Hibernate + MySQL");
 	        Session session = HibernateUtil.getSessionFactory().openSession();
 	        User user = new User();
-	        user.setId(1);
-	        user.setUsername("username");
-	        user.setPassword("password");
-	        user.setFirstname("firstname");
-	        user.setLastname("lastname");
+	     //   user.setId("id0");
+	        user.setUsername("username1");
+	        user.setPassword("password1");
+	        user.setFirstname("firstname1");
+	        user.setLastname("lastname1");
 	        user.setEmail("email1");
-	        user.setAddress("address");
-	        user.setPhone("06666666");
-	    	user.setFonction("fonction");
+	        user.setAddress("address1");
+	        user.setPhone("phone1");
+	    	user.setSex("sex1");
+	    	user.setFonction("fonction1");
 	        
 	        session.beginTransaction();
 	        
