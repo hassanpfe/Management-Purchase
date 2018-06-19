@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mdp.beans.BonCommande" table="BonCommande" catalog="management_purchase">
+        <id name="idBonCommande" type="int">
+            <column name="idBonCommande" length="50" not-null="true" unique="true" />        
+        </id>
+        <property name="idCollaborateur" type="int">
+            <column name="idCollaborateur  " length="50" not-null="true" unique="false" />
+        </property>
+          <property name="idProjet" type="int">
+            <column name="idProjet" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="statut" type="string">
+            <column name="statut" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="dateCommande" type="Date">
+            <column name="dateCommande" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="dateLivraisonSouhaite" type="Date">
+            <column name="dateLivraisonSouhaite" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="modePaiement" type="string">
+            <column name="modePaiemen" length="50" not-null="true" unique="false" />
+        </property>
+          <property name="delaiPaiement" type="int">
+            <column name="delaiPaiement" length="50" not-null="true" unique="false" />
+        </property>
+         <property name="lieuLivraisonSouhaite" type="string">
+            <column name="lieuLivraisonSouhaite" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="total" type="double">
+            <column name="total" length="50" not-null="true" unique="false" />
+        </property>
+        <property name="totalTtc" type="double">
+            <column name="totalTtc" length="50" not-null="true" unique="false" />
+        </property>
+         <property name="commentaire" type="string">
+            <column name="commentaire" length="50" not-null="true" unique="false" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -27,10 +27,8 @@
 	<logger name="com.mdp.springmvc" level="debug" additivity="false">
 		<appender-ref ref="FILE-AUDIT" />
 	</logger>
-	<logger name="org.springframework" level="debug" additivity="false">
-		<appender-ref ref="FILE-AUDIT" />
-	</logger>
-	<root level="debug">
+
+	<root level="error">
 		<appender-ref ref="FILE-AUDIT" />
 	</root>
 

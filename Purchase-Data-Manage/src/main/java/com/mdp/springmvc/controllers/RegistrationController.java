@@ -18,8 +18,11 @@ import com.mdp.beans.Article;
 import com.mdp.beans.BonCommande;
 import com.mdp.beans.LigneComande;
 import com.mdp.beans.User;
+
 import com.mdp.login.model.Login;
 import com.mdp.users.servicesImpl.UserServiceImpl;
+
+
 import com.mdp.utilities.ServiceMdpHelper;
 
 
@@ -43,6 +46,7 @@ public class RegistrationController {
 
 	}
 
+
 	@RequestMapping(value = "/addproduct", method = RequestMethod.GET)
 
 	public ModelAndView ShowAddproduct(HttpServletRequest request, HttpServletResponse response) {
@@ -54,21 +58,35 @@ public class RegistrationController {
 		return mav1;
 
 	}
-	@RequestMapping(value = "/register/registerProcess", method = RequestMethod.POST)
+	
+
+	@RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
+
 
 	public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
 
 			@ModelAttribute("user") User user) {
 
 		//userService.register(user);
-		logger.debug("Objet reçu de la vue : {}",ServiceMdpHelper.convertObjectToJSON(user));
-		UserServiceImpl serviceUser=new UserServiceImpl();
-		serviceUser.registerUser(user);
-		logger.debug("User Added");
+
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 
 	}
 
+	@RequestMapping(value = "/bonDeCommande", method = RequestMethod.POST)
+
+	public ModelAndView bc(HttpServletRequest request, HttpServletResponse response){
+
+			//@ModelAttribute("user") User user) {
+			ModelAndView mav = new ModelAndView("bc");
+			mav.addObject("bc");
+
+		//userService.register(user);
+
+		//return new ModelAndView("welcome", "firstname", user.getFirstname());
+			return mav ;
+
+	}
 	@RequestMapping(value = "/bcValidate", method = RequestMethod.POST)
 
 	public ModelAndView validateBC(HttpServletRequest request, HttpServletResponse response,
@@ -82,6 +100,7 @@ public class RegistrationController {
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 
 	}
+
 
 	@RequestMapping(value = "/addproduct/addProduct", method = RequestMethod.POST)
 
@@ -114,4 +133,6 @@ public class RegistrationController {
 		
 
 	}
+
+
 }
