@@ -23,7 +23,7 @@
 	<form:form class="form-horizontal" method="post"
 		modelAttribute="bonCommandeRequest" action="${userActionUrl}">
 
-		<form:hidden path="idBonCommande" />
+		
 		<div class="row">
 			<spring:bind path="idBonCommande">
 				<div class="col-sm-5 col-sm-offset-1">
