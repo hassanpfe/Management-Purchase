@@ -168,6 +168,8 @@
 
 
 		</div>
+		<h2>Liste des articles</h2>
+		<div class="row">
 
 
 		<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter

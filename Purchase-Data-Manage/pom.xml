@@ -163,7 +163,7 @@
 			<version>2.9.5</version>
 		</dependency>
 		<!-- End Jackson MAPPER -->
-		
+
 	</dependencies>
 	<build>
 		<finalName>Purchase-Data-Manage</finalName>

@@ -19,7 +19,9 @@ import com.mdp.beans.BonCommande;
 import com.mdp.beans.LigneComande;
 import com.mdp.beans.User;
 
+
 import com.mdp.login.model.Login;
+
 import com.mdp.users.servicesImpl.UserServiceImpl;
 
 
@@ -118,7 +120,7 @@ public class RegistrationController {
 
 	}
 
-	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
+
 
 	public void welcome(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("login") Login login) {
 
@@ -133,6 +135,5 @@ public class RegistrationController {
 		
 
 	}
-
 
 }

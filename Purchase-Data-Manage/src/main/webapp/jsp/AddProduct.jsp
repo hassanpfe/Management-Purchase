@@ -19,7 +19,7 @@
 
 <body>
 	<!-- jsp:include page="header.jsp" /> -->
-<h2>Ajout d'articles</h2>	
+
 	<form:form id="addProduct" class="form-horizontal"
 		modelAttribute="article" action="addProduct" method="post">
 
@@ -68,7 +68,7 @@
 				</div>
 			</div>
 
-			<div class="col-sm-5 hide" id="divRemise">
+			<div class="col-sm-5 ">
 				<label class="col-sm-3 control-label">Valeur Remise</label>
 				<div class="col-sm-5">
 					<form:input path="remise" type="text" class="form-control "
@@ -141,14 +141,11 @@
 	<div class="row">
 
 		<div class="col-sm-4 col-sm-offset-2">
-			<button  type="button" id="btnAddProduct" class="btn btn-primary">Ajouter</button>
+			<button id="btnAddProduct" class="btn btn-primary">Ajouter</button>
 		</div>
 
 	</div>
 	<br>
-	
-	<h2>Liste des articles</h2>
-	
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<table class="table table-striped" id="tabArticles">
@@ -158,8 +155,8 @@
 						<th>Article</th>
 						<th>Désignation</th>
 						<th>Quantité</th>
-						<th>Prix Unitaire</th>
 						<th>Remise</th>
+						<th>Prix Unitaire</th>
 						<th>Total</th>
 					</tr>
 				</thead>

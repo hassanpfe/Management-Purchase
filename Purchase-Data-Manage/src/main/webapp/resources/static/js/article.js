@@ -55,7 +55,7 @@ function buildTable(articles){
 			tr.appendChild(tdArticle);
 			
 			var tdDesignation=document.createElement("td");
-			tdDesignation.innerHTML=articles[i]["designation"]["designation1"]+" / "+articles[i]["designation"]["designation3"]+" / "+articles[i]["designation"]["designation3"];
+			tdDesignation.innerHTML=articles[i]["designation"]["designation1"]+" "+articles[i]["designation"]["designation3"]+" "+articles[i]["designation"]["designation3"];
 			tr.appendChild(tdDesignation);
 			
 			var tdQuantite=document.createElement("td");
@@ -69,25 +69,9 @@ function buildTable(articles){
 			var tdRemise=document.createElement("td");
 			tdRemise.innerHTML=articles[i]["remise"];
 			tr.appendChild(tdRemise);
-			
-			var tdRemise=document.createElement("td");
-			tot=parseFloat(articles[i]["prix"])*parseInt(articles[i]["quantite"]);
-			remise=(parseFloat(articles[i]["remise"])*tot)/100;
-			tdRemise.innerHTML=tot-remise;
-			tr.appendChild(tdRemise);
-			
+		
 		
 		tbody.appendChild(tr);
 	}
 }
-document.getElementById("remiseOui").onclick=function(){
-
-	document.getElementById("divRemise").classList.remove("hide");
-	
-};
-document.getElementById("remiseNon").onclick=function(){
-	document.getElementById("divRemise").classList.add("hide");
-	
-};
-
 

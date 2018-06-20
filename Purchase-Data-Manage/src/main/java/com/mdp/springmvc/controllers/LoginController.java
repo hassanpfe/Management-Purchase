@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mdp.beans.BonCommande;
@@ -30,18 +29,11 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 
-	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response, @RequestParam(value = "error", required = false) String error,
-			@RequestParam(value = "logout", required = false) String logout) {
+	public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
 
-		ModelAndView mav = new ModelAndView("login");
-		if(error !=null){
-			mav.addObject("error", "Login ou Mot de passe invalid");
-			
-		}
-		if(logout !=null){
-			mav.addObject("msg", "Vous avez été déconnecté avec succès");
-		}
+
 		
+		ModelAndView mav = new ModelAndView("login");
 		Login login =new Login();
 		mav.addObject(login);
 		request.getRemoteAddr();
@@ -81,7 +73,7 @@ public class LoginController {
 			 * 
 			 * To DO
 			 */
-
+			
 			BonCommande commandeRequest=new BonCommande();
 			commandeRequest.setAcheteur("Hassan");
 			System.out.println("firstname: "+user.getFirstname());

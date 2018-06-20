@@ -10,6 +10,9 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/management_purchase</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.hbm2dll.auto">create</property>
+
         <property name="show_sql">true</property>
         <mapping resource="com/mdp/beans/User.hbm.xml"></mapping>
     </session-factory>
