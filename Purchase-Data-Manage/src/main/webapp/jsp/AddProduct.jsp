@@ -10,7 +10,7 @@
 
 
 <head>
-<link rel="stylesheet" href="../resources/bootstrap.min.css"
+<link rel="stylesheet" href="/resources/bootstrap.min.css"
 	type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Article</title>
@@ -171,7 +171,7 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 	<script src="<c:url value='../resources/static/js/app.js' />"></script>
-	<script src="<c:url value='../resources/static/js/article.js'/>"></script>
+	<script src="<c:url value='/resources/static/js/article.js'/>"></script>
 	<script
 		src="<c:url value='../resources/static/js/service/user_service.js' />"></script>
 	<script

@@ -11,18 +11,40 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-	<table>
-		<tr>
-			<td>Welcome Nom; ${firstname}</td>
-		</tr>
-		<tr>
-		<td>Welcome Password ${password}</td>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td><a href="home.jsp">Home</a></td>
-		</tr>
-	</table>
-</body>
+	<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </body>
+        
 </html>

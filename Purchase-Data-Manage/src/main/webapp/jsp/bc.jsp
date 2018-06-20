@@ -78,20 +78,7 @@
 				</div>
 			</spring:bind>
 		</div>
-		<div class="row">
-			<spring:bind path="fonction">
-				<div class="col-sm-5 col-sm-offset-1">
-					<div class="form-group ${status.error ? 'has-error' : ''}">
-						<label class="col-sm-6 control-label">Fonction</label>
-						<div class="col-sm-6">
-							<form:input path="fonction" type="text" class="form-control "
-								id="fonction" placeholder="fonction" />
-							<form:errors path="fonction" class="control-label" />
-						</div>
-					</div>
-				</div>
-			</spring:bind>
-		</div>
+
 		<div class="row">
 			<spring:bind path="modePaiement">
 				<div class="col-sm-5 col-sm-offset-1">
@@ -171,32 +158,13 @@
 		<h2>Liste des articles</h2>
 		<div class="row">
 
-
-		<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter
-			Article</button>
-
-
-
-		<div class="row"></div>
-		<div id="divArticle" class="hide">
+			<div class="col-sm-4 col-sm-offset-2">
+				<button type="button" id="showAddArticle" class="btn btn-primary">Ajouter</button>
+			</div>
+			<div id="divArticle" class="hide">
 			<jsp:include page="AddProduct.jsp" />
+			</div>
 		</div>
-
-
-			<spring:bind path="modePaiementProj">
-				<div class="col-sm-5 ">
-					<div class="form-group ${status.error ? 'has-error' : ''}">
-						<label class="col-sm-6 control-label">Mode de paiement</label>
-						<div class="col-sm-6">
-							<form:input path="modePaiementProj" type="text" class="form-control "
-								id="modePaiementProj" placeholder="modePaiementProj" />
-							<form:errors path="modePaiementProj" class="control-label" />
-						</div>
-					</div>
-				</div>
-			</spring:bind>
-		</div>
-		<h2>Liste de articles</h2>
 
 		<!--Ajout template Article -->
 		<div class="row">
