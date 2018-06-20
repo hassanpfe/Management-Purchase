@@ -25,17 +25,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
 	type="text/javascript"></script>
-<!-- Latest compiled and minified JavaScript -->
-<!--  script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-	
-</script>-->
-<!-- jsp:include page="../fragments/header.jsp" /> -->
-<!-- spring:url value="hello.css" var="coreCss" /> -->
-<!-- spring:url value="bootstrap.min.css" 
-	var="bootstrapCss" />-->
-<!-- link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" /> -->
+
 </head>
 <nav class="navbar navbar-inverse navbar-static-top">
 	<div class="container">
